@@ -1,0 +1,75 @@
+$gris: (
+        "claro-1":      #909090,
+        "base":         #eeeeee,
+        "oscuro-1":     #3b4558,
+        "oscuro-2":     #2f384b,
+        "oscuro-7":     #232C38,
+        "oscuro-11":     #232C38
+);
+
+$rojo:(
+        "base":     #f52337,
+        "claro-1":  #ed1a3c,
+        "claro-2":  #d0113d
+);
+
+$naranja:(
+        "base":     #f8b133,
+        "oscuro-1": #ffa00e,
+        "oscuro-2": #f18d13,
+        "oscuro-3": #ff7a01,
+        "oscuro-4": #f16613,
+        "oscuro-5": #f05b3c,
+        "oscuro-6": #ef4b52,
+        "oscuro-7": #eb2b48
+);
+$azul:(
+    "base":#59cbe8,
+    "oscuro-1":#2f81d5
+    );
+
+$colors: (
+        "gris":     $gris,
+        "rojo":     $rojo,
+        "naranja":  $naranja,
+        "azul":         $azul
+);
+
+
+// Color Classes
+
+@each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+        @if $color_type == "base" {
+            .#{$color_name} {
+                background-color: $color_value !important;
+            }
+            .#{$color_name}-text {
+                color: $color_value !important;
+            }
+        }
+        @else if $color_name != "shades" {
+            .#{$color_name}.#{$color_type} {
+                background-color: $color_value !important;
+            }
+            .#{$color_name}-text.text-#{$color_type} {
+                color: $color_value !important;
+            }
+        }
+    }
+}
+
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+    @if map-has-key($colors, $color) {
+        $curr_color: map-get($colors, $color);
+        @if map-has-key($curr_color, $type) {
+            @return map-get($curr_color, $type);
+        }
+    }
+    @warn "Unknown `#{name}` in $colors.";
+    @return null;
+}

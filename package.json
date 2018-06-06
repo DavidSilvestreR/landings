@@ -1,0 +1,54 @@
+{
+  "name": "Landings_simetrical",
+  "version": "0.0.1",
+  "description": "Proyecto de plantillas en html estático para la página rediseno de  Totlplay Residencial",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp-desarrollo": "gulp",
+    "gulp-java": "gulp java"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/masclicksfrontend/etapa-0.git"
+  },
+  "author": "Masclicks (Ismael Tello - Gerardo Ramirez)",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/masclicksfrontend/etapa-0#readme",
+  "devDependencies": {
+    "animate.css": "^3.5.2",
+    "browser-sync": "^2.18.8",
+    "del": "^3.0.0",
+    "gsap": "^1.20.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-data": "^1.2.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-javascript-obfuscator": "^1.1.2",
+    "gulp-penthouse": "^0.2.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.2.1",
+    "jquery-validation": "^1.16.0",
+    "materialize-css": "^0.100.1",
+    "merge-stream": "^1.0.1",
+    "owl.carousel": "^2.2.0",
+    "pump": "^1.0.2",
+    "replace-in-file": "^2.6.2",
+    "run-sequence": "^2.1.0",
+    "uglify-es": "^3.0.28",
+    "scrollmagic": "^2.0.5",
+    "jquery-lazy": "^1.7.9"
+  },
+  "dependencies": {
+    "pug": "^2.0.3"
+  }
+}

@@ -1,0 +1,108 @@
+include mixin
+
+-var produccion= ambientetrabajado
+
+block variables
+
+doctype html
+html(lang="es")
+	head
+		meta(charset="utf-8")
+		block metas
+		link(rel="shortcut icon" href=(basePath || '/') +"imagenes/logo-shield.png")
+		link(rel="stylesheet" href= (basePath || '/') + 'css/estilos.css')
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	body
+		header
+			img(src="/imagenes/logo-eduboston.png", alt="").logo
+
+		main( class='eduboston')
+			section.conecta
+					.row
+						.col.s12.l7.video.hide-on-med-and-down
+							<iframe  src="https://www.youtube.com/embed/GqwjTlljQH0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+						.col.s12.l5.texto
+							h1 EduBoston, te conecta con la escuela de tus sueños
+							p La mayoría de las agencias tienen escuelas con las que trabajan.
+							p EduBoston te conectará con la escuela de tus sueñosmediante el uso de tecnología innovadora. Actualmente, <span>contamos con más de 3,000 escuelas</span> secundarias en comunidades acogedoras y seguras en los Estados Unidos.
+			section.form
+				.container
+					.row
+						.col.s12.l6.texto
+							h2 Es tu oportunidad de estudiar <br> en el extanjero
+							p Vivir y estudiar en un país extranjero es un desafío para cualquier persona, especialmente para un joven. EduBoston ha ayudado a más de 4,000 estudiantes internacionales en los últimos 20 años, lo que le ha otorgado una reputación indiscutible en la industria. Te aseguramos que tu hijo derá cuidado con el cariño y atención que merece.   
+						.col.s12.l6.contenedor
+							.container_form.z-depth-2
+								p.title Formulario de consulta del estuduante
+								form(action="")
+									div.input-field.col-s12
+										input(id="fullname" name="fullname" type="text").validate
+										label(for="fullname") Nombre completo*
+									div.input-field.col-s12
+										input(id="mail" name="mail" type="email").validate
+										label(for="mail") Correo electronico*
+									div.input-field.col-s12
+										input(id="phone" name="phone" type="number").validate
+										label(for="phone") Teléfono*
+									div.input-field.col-s12
+										select
+											option(value="") Option
+											option(value="") Option
+											option(value="") Option
+										label Grado escolar del estudiante
+									div.input-field.col-s12.center-align
+										button.btn.waves-effect.waves-light Enviar
+			section.esculas
+				.container
+					h2 Contamos con más de 3,000 escuelas
+					.row.images.hide-on-med-and-down
+						.col.s12.l3
+							img(src="/imagenes/escuela2.jpg", alt="")
+						.col.s12.l3
+							img(src="/imagenes/escuela7.jpg", alt="")
+						.col.s12.l3
+							img(src="/imagenes/escuela8.jpg", alt="")
+						.col.s12.l3
+							img(src="/imagenes/escuela1.jpg", alt="")
+					p Contamos con <span>la tarifa más baja y más accesible que nunca</span> y cone el control oara deducir cuánto  quieres gastar en la educación de tu hijo. EduBoston cree que la oportunidad de estudiar en el extranjero debe estar disponible para todos, independientemente de las realidades fincancieras o el país de origen. Por lo tanto, EduBoston ofrece una opción de tarifa más baja sin comprometer la calidad de sus servicios. 
+
+		footer
+			.container
+				.row
+					.col.s12.l4.offset-l1.logo
+						.col.s12.l6.img.hide-on-med-and-down
+							img(src="/imagenes/logo-shield.png", alt="")
+						.col.s12.l6
+							p.title EDUBOSTON
+							P 161 Harvard Ave. Suite 13A <br> Aliston, MA 02134
+							p 617-1117 <br> contact@eduboston.com
+					.col.s12.l4.offset-l2.logo
+						p EDUBOSTON MEXICO <br> Clark Egnor <br> Campos Eliseos 188 piso 2 oficina 201 <br> Colonia Polanco, CP:11560
+						p Tel. +52(55)5283-2441 ext 208
+				.legales
+					img(src="/imagenes/csiet-white.png", alt="").hide-on-med-and-down
+					p  EduBoston is honored to have full compliance with CSIET certified standards recognizing our commitment to providing students with safe and welcoming homes.
+				.row
+					.col.s12.l6.copy
+						a(href="") Copyright 2017 EDUBOSTON. All rights reserved | Privacy
+					.col.s12.l6.redes
+						ul
+							li
+								a(href="")
+									span.icon.fb
+							li
+								a(href="")
+									span.icon.tw
+							li
+								a(href="")
+									span.icon.isnt
+							li
+								a(href="")
+									span.icon.in
+							li
+								a(href="")
+									span.icon.you
+
+		script(src= (basePath || '/') + 'js/scripts.js' async)
+

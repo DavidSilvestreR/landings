@@ -1,0 +1,107 @@
+footer{
+	background:#171c66;
+	color: white;
+	border-top: 10px solid #1b75bc;
+	padding-top: 20px;
+	p{
+		font-size: 12px;
+	}
+	@media #{$medium-and-down} {
+		text-align: center;
+		font-size: 12px;
+	}
+	.legales{
+		border-bottom: 1px solid white;
+		text-align: center;
+		margin-bottom:20px;
+		img{
+		    	width: 83px;
+		    	display: inline-block;
+		 }
+		p{
+		    margin:auto;
+		    margin-bottom: 20px;
+		    display: inline-block;
+		    
+		    top: -30px;
+		    left: 10px;
+		    @media #{$medium-and-down} {
+		    	position: static;
+		    	top: auto;
+		    	left: auto;
+		    }
+		    
+		}
+	}
+	.row{
+		.title{
+			font-size: 18px;
+			font-weight: bold;
+			margin:0px;
+			margin-top:10px;
+		}
+		.logo{
+			.img{
+				text-align:right;
+			}
+			img{
+				width: 80px;
+				position: relative;
+				top: 15px;
+			}
+		}
+		.copy{
+			text-align: center;
+			a{
+				color: white;
+				font-size: 12px;
+			}
+		}
+		.redes{
+			text-align: center;
+		}
+		ul{
+			margin:0px;
+			li{
+				display: inline-block;
+				span.icon{
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+					margin:0px 10px;
+					&.fb{
+						background-image: url("../imagenes/facebook.png");
+	                    &:hover{
+	                    	background-image: url("../imagenes/facebook-hover.png");
+	                    }
+					}
+					&.tw{
+						background-image: url("../imagenes/twitter.png");
+						&:hover{
+	                    	background-image: url("../imagenes/twitter-hover.png");
+	                    }
+					}
+					&.isnt{
+						background-image: url("../imagenes/instagram.png");
+						&:hover{
+	                    	background-image: url("../imagenes/instagram-hover.png");
+	                    }
+					}
+					&.in{
+						background-image: url("../imagenes/linkedin.png");
+						&:hover{
+	                    	background-image: url("../imagenes/linkedin-hover.png");
+	                    }
+					}
+					&.you{
+						background-image: url("../imagenes/youtube.png");
+						&:hover{
+	                    	background-image: url("../imagenes/youtube-hover.png");
+	                    }
+					}
+				}
+			}
+		}
+	}
+	
+}

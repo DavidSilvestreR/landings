@@ -1,0 +1,73 @@
+/*
+    CONTENIDO 
+    1. Mixins
+    2. Variables
+    3. Esitlos html, body, container y main
+    4. Botones
+    5. Estilos de textos
+    6. Plugins
+    8. Animaciones
+------------------------------------------------------------------ */
+
+// 1. Mixins
+@mixin fuente($tamano, $ancho){
+    font : {
+        size: $tamano;
+        weight: $ancho;
+    }
+}
+// 2. Variables
+$pathImagens : '../imagenes/';
+// 3. Esitlos html, body, container y main
+html{
+    font-family: 'Open_Sans', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    .container {
+        margin: 0 auto;
+        max-width: 1200px; 
+        width: 90%;
+    }
+    @media #{$medium-and-up} {
+        .container {
+            width: 90%;
+        }
+    }
+    @media #{$large-and-up} {
+        .container {
+            width: 97%;
+        }
+    }
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.row-sin-margen{
+    margin-bottom: 0;
+}
+// 4.botones
+.btn{}
+// 5. Estilos de textos
+.bold {
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+// No wrap
+.text-nowrap {
+    white-space: nowrap;
+}
+
+//Formularios error
+.error{
+    font-size: 11px;
+    text-align: left;
+}
+// 6. Plugins

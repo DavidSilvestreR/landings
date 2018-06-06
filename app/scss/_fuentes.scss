@@ -1,0 +1,41 @@
+/*
+*
+*	Índice de contenido
+*	1. 	Variables
+*	2. 	Fuentes
+*******************************************************************************************/
+
+//	1. 	Variables
+$rutaFuentes : '../fuentes/';
+$coleccionFuentes : (
+	'Open_Sans' : (
+		'OpenSans-Light',
+		'Open_Sans',
+		'OpenSans-Bold',
+		'OpenSans-Bold'
+	),
+);
+
+// 2. 	Fuentes
+@each $fuente, $tipos in $coleccionFuentes {
+	@each $nombre, $peso in $tipos {
+
+		@font-face {
+			font-family: quote($fuente);
+			src:url(quote(#{$rutaFuentes}#{to-lower-case($fuente)}#{'/'}#{$fuente}#{'-'}#{$nombre}#{'.eot'}));
+			src:url(quote(#{$rutaFuentes}#{to-lower-case($fuente)}#{'/'}#{$fuente}#{'-'}#{$nombre}#{'.eot?#iefix'})) format('embedded-opentype'),
+				url(quote(#{$rutaFuentes}#{to-lower-case($fuente)}#{'/'}#{$fuente}#{'-'}#{$nombre}#{'.ttf'})) format('truetype'),
+				url(quote(#{$rutaFuentes}#{to-lower-case($fuente)}#{'/'}#{$fuente}#{'-'}#{$nombre}#{'.woff'})) format('woff'),
+				url(quote(#{$rutaFuentes}#{to-lower-case($fuente)}#{'/'}#{$fuente}#{'-'}#{$nombre}#{'.woff2'})) format('woff2');
+			font-weight: $peso;
+			@if str-index(to-lower-case($nombre), 'italic') != null {
+				font-style: italic;
+			} @else {
+				font-style: normal;
+			}
+
+
+		}
+
+	}
+}
