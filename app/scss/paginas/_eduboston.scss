@@ -1,7 +1,7 @@
 main.eduboston{
 	section.conecta{
 		padding-top: 40px;
-		padding-bottom:120px; 
+		padding-bottom:230px; 
 		@media #{$medium-and-down} {
 				height: auto;
 				padding-top: 10px;
@@ -12,8 +12,9 @@ main.eduboston{
 			font-size: 36px;
 			font-weight: bold;
 			@media #{$medium-and-down} {
-				font-size: 20px;
+				font-size: 24px;
 				margin-top: 0px;
+				margin-bottom: 0px;
 			}
 		}
 		p{
@@ -26,13 +27,24 @@ main.eduboston{
 				color: #ce123c;
 			}
 		}
+		.mobile{
+			width: 100%;
+			margin-bottom: 10px;
+		}
 		.video{
 			position: relative;
+			.cover{
+				height: 450px;
+				position: absolute;
+				width: 95%;
+	    		left: 0px;
+	    		top: 0px;
+			}
 		}
 		.texto{
 			padding:0px 100px;
 			padding-left:0px;
-			padding-top:20px;
+			padding-top:80px;
 			@media #{$medium-and-down} {
 				text-align: center;
 				padding:0px 5px;
@@ -48,6 +60,7 @@ main.eduboston{
 	}
 	section.form{
 		padding:100px 0px;
+		padding-bottom: 200px;
 		background-image: url("../imagenes/background-form.jpg");
 		background-repeat: no-repeat;
 		background-size:cover;
@@ -154,6 +167,18 @@ main.eduboston{
 		}
 
 
+	}
+	section.gracias{
+		padding:100px;
+		padding-top: 50px;
+		text-align: center;
+		h1{
+			color: #ce123c;
+			font-weight: bold;
+		}
+		p{
+			font-size: 30px;
+		}
 	}
 }
 

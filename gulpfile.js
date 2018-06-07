@@ -42,10 +42,11 @@ var gulp                    = require('gulp'),
         'node_modules/materialize-css/js/collapsible.js',
         'node_modules/materialize-css/js/dropdown.js',
         'node_modules/materialize-css/js/sideNav.js',
+        'node_modules/materialize-css/js/slider.js',
         'node_modules/materialize-css/js/waves.js',
         'node_modules/materialize-css/js/forms.js',
         'node_modules/jquery-validation/dist/jquery.validate.js',
-        'node_modules/materialize-css/js/modal.js',     
+        'node_modules/materialize-css/js/modal.js',
         'app/js/funciones.js'
     ];
 /*
@@ -241,7 +242,7 @@ gulp.task('pug-optimizado-masclicks', function buildHTML() {
 * Tareas de producción con minificación de archivos (para desarrollotp)
 * */
 gulp.task('optimizado', function(){
-    secuencial('limpiar', ['sass-produccion', 'javascript-produccion', 'optimizarimagenes', 'fuentes', 'copyExtraFiles'], 'pug-optimizado-masclicks', 'remplazo-desarrollo');
+    secuencial('limpiar', ['sass-produccion', 'javascript-produccion', 'optimizarimagenes', 'fuentes', 'copyExtraFiles'], 'pug-optimizado-masclicks');
 });
 
 
@@ -289,5 +290,5 @@ gulp.task('pug-grupo', function buildHTML() {
 
 // gulp grupo (tareas sin minificar archivos)
 gulp.task('grupo', function(){
-    secuencial('limpiar', ['sass-grupo', 'javascript-grupo', 'optimizarimagenes', 'fuentes', 'copyExtraFiles'], 'pug-grupo', 'remplazo');
+    secuencial('limpiar', ['sass-grupo', 'javascript-grupo', 'optimizarimagenes', 'fuentes', 'copyExtraFiles'], 'pug-grupo');
 });

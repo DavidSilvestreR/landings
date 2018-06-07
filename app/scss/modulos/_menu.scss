@@ -6,6 +6,13 @@ header{
     img{
         width: 240px;
         padding: 5px;
+        @media #{$medium-and-down} {
+        	width: 170px;
+		    margin-top: 5px;
+        }
     }
     margin-bottom: 20px;
+    @media #{$medium-and-down} {
+    	margin-bottom: 10px;
+    }
 }

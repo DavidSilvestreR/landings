@@ -1,0 +1,77 @@
+extends ../layout
+
+block metas
+	title= 'EDUBOSTON'
+	meta(property="og:title"        content='EDUBOSTON')
+	meta(property="twitter:title"   content='EDUBOSTON')
+block seccion
+	section.conecta
+		.row
+			.col.s12.hide-on-med-and-up
+				img(src="/imagenes/eduboston-lan-mob.jpg", alt="eduboston").cover.mobile
+			.col.s12.l7.video.hide-on-med-and-down
+				<iframe id="iframe" src="" frameborder="0"  allowfullscreen></iframe>
+				img(src="/imagenes/back_video.jpg", alt="" id="coverimg").cover
+			.col.s12.l5.texto
+				h1 EduBoston te conecta con la escuela de tus sueños
+				p Actualmente, <span>contamos con más de 3,000 escuelas</span> secundarias en comunidades acogedoras y seguras en los Estados Unidos.
+	section.form
+		.container
+			.row
+				.col.s12.l6.texto
+					h2 ¡No dejes pasar esta oportunidad!
+					p  El futuro ya nos alcanzó, es momento de asegurar que tu hijo tenga la educación que siempre has soñado.  
+				.col.s12.l6.contenedor
+					.container_form.z-depth-2
+						p.title RECIBE MÁS INFORMACIÓN
+						form(id="contact" action="#")
+							div.input-field.col-s12
+								input(id="fullname" name="fullname" type="text").validate
+								label(for="fullname") Nombre completo*
+								<span class="helper-text" data-error="Ingresa tu nombre" data-success="right"></span>
+							div.input-field.col-s12
+								input(id="mail" name="mail" type="email").validate
+								label(for="mail") Correo electronico*
+								<span class="helper-text" data-error="Ingresa un correo valido" data-success="right"></span>
+							div.input-field.col-s12
+								input(id="phone" name="phone" type="number").validate
+								label(for="phone") Teléfono*
+								<span class="helper-text" data-error="Ingresa un numero valido" data-success="right"></span>
+
+							div.input-field.col-s12
+								select(id="grado" name="grado")
+									option(value="" disabled selected) Grado escolar
+									option(value="1º de secundaria") 1º de secundaria
+									option(value="2º de secundaria") 2º de secundaria
+									option(value="3º de secundaria") 3º de secundaria
+									option(value="Otro") Otro
+								label Grado escolar del estudiante
+							div.input-field.col-s12.hide
+								input(id="otro" name="otro" type="text").validate
+							div.input-field.col-s12.center-align
+								button.btn.waves-effect.waves-light Enviar
+	section.esculas
+		.container
+			h2 Contamos con más de 3,000 escuelas
+			.row.images.hide-on-med-and-down
+				.col.s12.l3
+					img(src="/imagenes/escuela2.jpg", alt="")
+				.col.s12.l3
+					img(src="/imagenes/escuela7.jpg", alt="")
+				.col.s12.l3
+					img(src="/imagenes/escuela8.jpg", alt="")
+				.col.s12.l3
+					img(src="/imagenes/escuela8.jpg", alt="")
+			.row.hide-on-med-and-up
+				.slider
+					ul.slides
+						li
+							img(src="/imagenes/escuela2.jpg", alt="")
+						li
+							img(src="/imagenes/escuela7.jpg", alt="")
+						li
+							img(src="/imagenes/escuela8.jpg", alt="")
+						li
+							img(src="/imagenes/escuela8.jpg", alt="")
+
+			p <span> Contamos con  tarifas accesibles</span> <br> Todos como padres buscamos que la educación de nuestros hijos los prepare para un mejor futuro. ¡EduBoston te ayuda a lograrlo!
